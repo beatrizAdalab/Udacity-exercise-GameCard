@@ -1,0 +1,189 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/gaming-pattern.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Love Ya Like A Sister', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+  height: 15%;
+}
+
+h1 {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 600;
+    font-size: 2.8em;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 40%;
+    height: 70%;
+    min-width: 550px;
+    max-height: 700px;
+    background: linear-gradient(180deg, #f4dc26 60%, #E1F5A9);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 3em;
+    list-style: none;
+}
+
+.deck li {
+    height: 22%;
+    width: 22%;
+    margin:1%;
+    background: #2e3d49;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: transform 0.6s;
+}
+
+.deck .card:hover{
+  transform: rotateY(35deg);
+}
+
+.deck .card img{
+    display: none;
+}
+
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: white;
+    cursor: default;
+}
+
+.deck .card.open  img{
+    display:inline;
+    height: 70%;
+}
+
+.deck .card.show img{
+    height: 70%;
+    display:inline;
+}
+
+.deck .card.show {
+    background-color: white;
+}
+
+.deck .card .match {
+    cursor: default;
+}
+
+.deck .card .match img {
+    cursor: default;
+    height: 70%;
+    display:inline;
+}
+
+.deck .card.match img{
+    height: 70%;
+    display:inline;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-align: left;
+  width: 35%;
+  min-width: 550px;
+  font-size: 22px;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content:space-between;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .timer {
+    float: right;
+    cursor: inline-block;
+    margin-right: 10%;
+}
+
+.score-panel .restart {
+    float:right;
+    margin-right: 4%;
+    cursor: pointer;
+}
+
+.button, .button2{
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin;
+    background-color: #f4dc26; /* Green */
+    border-radius: 10px;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline:none;
+}
+
+.button:hover{
+  background-color: #ACFA58; /* Green */
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
